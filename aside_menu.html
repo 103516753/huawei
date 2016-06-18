@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>华为首页响应式设计</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" width="device-width,intial-scale=1,user-saclable=no">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="icon" href="img/icon.ico">
+    <link  href="fonts/glyphicons-halflings-regular.eot">
+    <style>
+        a{
+            text-decoration: none !important;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+        h2>a{
+            color:#CC0000 !important;
+        }
+        h2>a.glyphicon{
+            float:right;
+            color: #4A4A4A;
+        }
+        h2{
+            padding: 20px;
+            border-bottom: 2px solid #3333FF;
+
+        }
+        .active{
+            color: #CA0813;
+        }
+
+        #accordion >div.panel{
+
+        }
+        .panel-default .panel-heading{
+            background-color: #fff;
+        }
+        .panel-group .panel + .panel{
+            margin-top: 0;
+        }
+        a[data-parent="#accordion"].active>span{
+            color: #CA0813;
+        }
+        a[data-parent="#accordion"]>b{
+            float: right;
+        }
+        a[data-parent="#accordion"]{
+            display: inline-block;
+            width: 100%;
+        }
+        div.panel-body{
+            background-color:  #D4E9FE;
+            padding: 0;
+        }
+        div.panel-body>ul>li{
+            /*margin: 20px 0;*/
+            margin: 0;
+            padding: 15px;
+            /*padding-left: 15px;*/
+            border-bottom: 1px solid #ABC3E1;
+
+        }
+        div.panel-body>ul>li>a{
+            color: #373737;
+        }
+        div.panel-body>ul>li.title>a{
+            color: #CA0813;
+        }
+        div.panel-body>ul>li:hover{
+            /*margin: 20px 0;*/
+            background-color:  #9BCDFD;
+        }
+        .panel-heading{
+            padding: 20px 15px;
+        }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <h2>
+        <a href="#">首页Menu</a>
+        <a href="index.html" class="glyphicon glyphicon-remove" id="returnpage"></a>
+    </h2>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+        <!--list 1-->
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="person&family">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#" aria-expanded="false" aria-controls="person&family_list">
+                        <span>个人与家庭用户</span>
+                        <b class="glyphicon glyphicon-chevron-right"></b>
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <!--list 2-->
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="enterprise">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#" aria-expanded="false" aria-controls="enterprise">
+                        <span>企业用户</span>
+                        <b class="glyphicon glyphicon-chevron-right"></b>
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <!--list 3-->
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#">
+                        <span>运营商用户</span>
+                        <b class="glyphicon glyphicon-chevron-right"></b>
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <!--list 4-->
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="hangye">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#hangye_list">
+                        <span>行业洞察</span>
+                        <b class="glyphicon glyphicon-chevron-down"></b>
+                    </a>
+                </h4>
+            </div>
+            <div id="hangye_list" class="panel-collapse collapse" role="tabpanel" aria-labelledby="hangye">
+                <div class="panel-body">
+                    <ul >
+                        <li><a href="#">全联接世界</a></li>
+                        <li><a href="#">客户声音</a></li>
+                        <li><a href="#">市场趋势</a></li>
+                        <li><a href="#">创新</a></li>
+                        <li><a href="#">热点技术</a></li>
+                        <li><a href="#">标准与行业贡献</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--list 5-->
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="solution">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#solution_list">
+                        <span>解决方案</span>
+                        <b class="glyphicon glyphicon-chevron-down"></b>
+                    </a>
+                </h4>
+            </div>
+            <div id="solution_list" class="panel-collapse collapse" role="tabpanel" aria-labelledby="solution">
+                <div class="panel-body">
+                    <ul>
+                        <li class="title"><a href="#">热点话题</a></li>
+                        <li><a href="#">无处不在的移动宽带</a></li>
+                        <li><a href="#">FMC 2.0融合超宽带</a></li>
+                        <li><a href="#">SoftCOM</a></li>
+                        <li><a href="#">运维转型</a></li>
+                        <li><a href="#">软件定义网络（SDN）</a></li>
+                        <li><a href="#">精简IT，敏捷商道</a></li>
+                    </ul>
+                    <ul>
+                        <li class="title"><a href="#">行业</a></li>
+                        <li><a href="#">公共安全</a></li>
+                        <li><a href="#">政务</a></li>
+                        <li><a href="#">轨道</a></li>
+                        <li><a href="#">电力</a></li>
+                        <li><a href="#">金融</a></li>
+                        <li><a href="#">影视传媒</a></li>
+                        <li><a href="#">教育</a></li>
+                        <li><a href="#">医疗</a></li>
+                        <li><a href="#">油气</a></li>
+                        <li><a href="#">制造</a></li>
+                        <li><a href="#">零售</a></li>
+                        <li><a href="#">酒店</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--list 6-->
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="product">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#product_list">
+                        <span>产品</span>
+                        <b class="glyphicon glyphicon-chevron-down"></b>
+                    </a>
+                </h4>
+            </div>
+            <div id="product_list" class="panel-collapse collapse" role="tabpanel" aria-labelledby="product">
+                <div class="panel-body">
+                    <ul>
+                        <li class="title"><a href="#">个人及家庭产品</a></li>
+                        <li><a href="#">手机</a></li>
+                        <li><a href="#">平板电脑</a></li>
+                        <li><a href="#">智能穿戴</a></li>
+                        <li><a href="#">移动宽带</a></li>
+                        <li><a href="#">智能家居</a></li>
+                        <li><a href="#">配件</a></li>
+                        <li><a href="#"></a></li>
+                    </ul>
+                    <ul>
+                        <li class="title"><a href="#">商用产品</a></li>
+                        <li><a href="#">无线电信网络</a></li>
+                        <li><a href="#">固定电信网络</a></li>
+                        <li><a href="#">核心网</a></li>
+                        <li><a href="#">电信软件</a></li>
+                        <li><a href="#">网络能源</a></li>
+                        <li><a href="#">交换机</a></li>
+                        <li><a href="#">路由器</a></li>
+                        <li><a href="#">无线局域网</a></li>
+                        <li><a href="#">服务器</a></li>
+                        <li><a href="#">存储</a></li>
+                        <li><a href="#">云计算</a></li>
+                        <li><a href="#">企业云服务</a></li>
+                        <li><a href="#">安全</a></li>
+                        <li><a href="#">接入网</a></li>
+                        <li><a href="#">传送网</a></li>
+                        <li><a href="#">网络能源</a></li>
+                        <li><a href="#">智真与视讯</a></li>
+                        <li><a href="#">智能视频监控</a></li>
+                        <li><a href="#">统一通信</a></li>
+                        <li><a href="#">联络中心</a></li>
+                        <li><a href="#">eLTE宽带集群</a></li>
+                        <li><a href="#">eLTE宽带接入</a></li>
+                        <li><a href="#">GSM-R</a></li>
+                        <li><a href="#">网管与软件</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--list 7-->
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="support">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#support_list">
+                        <span>技术支持</span>
+                        <b class="glyphicon glyphicon-chevron-down"></b>
+                    </a>
+                </h4>
+            </div>
+            <div id="support_list" class="panel-collapse collapse" role="tabpanel" aria-labelledby="support">
+                <div class="panel-body">
+                    <ul>
+                        <li class="title"><a href="#">消费者</a></li>
+                        <li><a href="#">产品手册</a></li>
+                        <li><a href="#">软件下载</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">花粉俱乐部</a></li>
+                        <li><a href="#">服务中心</a></li>
+                    </ul>
+                    <ul>
+                        <li class="title"><a href="#">企业用户</a></li>
+                        <li><a href="#">技术支持</a></li>
+                        <li><a href="#">软件下载</a></li>
+                        <li><a href="#">互动社区</a></li>
+                        <li><a href="#">工具</a></li>
+                        <li><a href="#">文档查找</a></li>
+                        <li><a href="#">案例库</a></li>
+                        <li><a href="#">华为培训与认证</a></li>
+                    </ul>
+                    <ul>
+                        <li class="title"><a href="#">运营商用户</a></li>
+                        <li><a href="#">产品支持</a></li>
+                        <li><a href="#">Group Space</a></li>
+                        <li><a href="#">公告</a></li>
+                        <li><a href="#">华为资料直通车</a></li>
+                        <li><a href="#">培训</a></li>
+                        <li><a href="#">HedEx Lite</a></li>
+                        <li><a href="#">知道社区</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--list 8-->
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="community">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#">
+                        <span>开发者社区</span>
+                        <b class="glyphicon glyphicon-chevron-right"></b>
+                    </a>
+                </h4>
+            </div>
+        </div>
+        <!--list 9-->
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="shopmall">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#">
+                        <span>华为商城</span>
+                        <b class="glyphicon glyphicon-chevron-right"></b>
+                    </a>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-1.11.3.js"></script>
+    <script src="js/bootstrap.js"></script>
+
+
+</body>
+</html>
