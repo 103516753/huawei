@@ -70,7 +70,7 @@ img{
     margin: 0 5px;
     height: 63px;
     line-height: 63px;
-    font-size: .9px;
+    font-size: .9em;
 }
 #header > .container > .header_right_box b{
     border-left: 1px solid #333;
